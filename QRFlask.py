@@ -39,14 +39,10 @@ def form():
 
         os.system("mv " + qr.filename + str(" /home/AdityaSingh17/flask_onweb/static/QRcode/"+form_fname+".png "))           #relative moving, easy when we deploy. note /front_end will cause error
 
-        #qrfilename = "~/Desktop/QR_Project/Front_end/static/"+form_fname+".png"
-        #os.system("mv ~/Desktop/QR_Project/helloworld.html ~/Desktop/QR_Project/Front_end/templates/helloworld.html")  #deosnt work when i move
-
 
         full_filename = os.path.join(app.config['UPLOAD_FOLDER'], (form_fname+".png"))    #under folder QRcode, there is a .png file.
 
-        #full_filename = os.path.join(app.config['UPLOAD_FOLDER'], ("fc1.png"))    #under folder QRcode, there is a .png file.    #THIS IS WORKING, THAT MEANS THERE IS A PROBLEM IN MOVING! (PYTHONANYWHERE ONLY)
-        #return render_template("upload.html" , user_image = full_filename)   #PYTHONANYWHERE ONLY EXAMPLE TO RENDER, IMAGE IS RENDERING, ONLY PROBLEM IS MOVING!!!!!!!!!!!!!!!!!!!
+        #return render_template("upload.html" , user_image = full_filename)   
 
         app.config['THEFILE'] = form_fname+".png"           #made a config to be used futher in my file (for app.route("/form/QR"))
 
