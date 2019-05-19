@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Contact Form </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'CSS/form.css') }}">
+</head>
+<body>
+<form NAME = "REGFORM" METHOD = "POST" action = /form >
+<div class="contact-form">
+        <h2 class = "section-name"> Fill the below form </h2>
+        <p> Name<span style="color:#FF0000;"> *</span> </p>
+        <input type = "text" name = "name" autocomplete="off">
+
+        <p> Phone Number<span style="color:#FF0000;"> *</span> </p>
+        <input type = "text" name = "phone" autocomplete="off">
+
+        <p> Email Id<span style="color:#FF0000; "> * <span> </p>
+        <input type = "text" name = "email" autocomplete="off">
+
+        <p> Enter the info about the event </p>
+        <textarea> </textarea>
+
+        <p> Enter the filename by which you want to store it (leave blank if you dont wanna mess with it) </p>
+        <input type = "text" name = "fname" autocomplete="off">
+
+        <p><span style="color:#FF0000;">*</span> - Required to be filled </p>
+
+        <button type = "submit" VALUE = "Submit" > Submit </button>
+</div>
+</form>
+</body>
+</html>
+
+

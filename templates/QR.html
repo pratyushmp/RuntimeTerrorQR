@@ -1,0 +1,29 @@
+<!-- the below code is working, but loads the previous qr code. not the fresh one! -->
+
+<!-- <img src="{{ url_for('static', filename = 'flask4.png') }}" height="300" width="200">  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR CODE</title>
+</head>
+<body>
+    <!-- <img src="{{ user_image }}" alt="QRCODE!">  -->
+    <!--                                                      
+    <button type="button" id="down" > PRESS HERE TO DOWNLOAD!</button>
+    <button type="button" id="goback"> PRESS HERE TO GO BACK!</button>
+    <a href="\form\QRIMAGE"> Download image!</a>
+    <a href="\form"> Go back to the form</a>
+
+
+    THE REASON I HAVE TO GIVE \\form is because the first one is being used as an escape character. 
+
+    THE ONLY USE OF THIS PAGE IS TO DISPLAY THE OPTIONS AVAIBALE TO THE USER!   
+    -->
+    OR IMAGE GENERATED!
+   <!-- <button onclick="window.location='\\form\\{{ fname }}';">See QRIMAGE!!</button>  -->
+    <button onclick="window.location='\\form\\QR\\{{ fname }}';">Download the image!</button> <!-- fname comes from flask as filename for url creation!-->
+    <button onclick="window.location='\\form';">GO back to form page</button> 
+    <button onclick="window.location='\\form\\QRIMG\\{{ fname }}';">see image</button>
+    
+</body>
+</html>

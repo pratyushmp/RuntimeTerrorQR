@@ -1,0 +1,15 @@
+<!-- the below code is working, but loads the previous qr code. not the fresh one! -->
+
+<!-- <img src="{{ url_for('static', filename = 'flask4.png') }}" height="300" width="200">  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR IMAGE</title>
+</head>
+<body>
+     <img src="{{ user_image }}" alt="QRCODE!"> 
+     <button onclick="window.location='\\';">GO to home!</button>
+     <button onclick="window.location='\\form\\QR\\{{ fname }}';">Download the image!</button>
+     <button onclick="window.location='\\form';">GO back to form page</button> 
+</body>
+</html>

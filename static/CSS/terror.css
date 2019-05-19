@@ -1,0 +1,48 @@
+.topnav {
+    background-color:red;
+    overflow: hidden;    
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color:black;
+}
+
+.active {
+    background-color: blue;
+    color:white;
+}
+
+.topnav .icon {
+    display: none;
+} 
+
+.top-wrapper {
+    padding: 500px 0 100px 0;
+    background-image: url("terror_image.jpg");
+    background-size: cover;
+    height:100%;
+    color: white;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.top-wrapper h1,p {
+    color : red;
+} 
+
+.container h1,p {
+    position: relative;
+    top:80px;
+}

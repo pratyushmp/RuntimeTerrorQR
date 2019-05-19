@@ -1,0 +1,20 @@
+.contact-form {
+    padding-top: 20px;
+  }
+  
+  /* Add CSS for <input> and <textarea> tags */
+  input ,textarea {
+    width: 400px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+    font-size: 18px;
+    border:1px solid #dee7ec;
+    
+  }
+  
+  /* Add CSS for contact-submit */
+  .contact-submit {
+    background-color:#dee7ec;
+    color:#889eab
+  }
