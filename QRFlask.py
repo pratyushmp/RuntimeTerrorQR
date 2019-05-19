@@ -39,18 +39,9 @@ def form():
 
         os.system("mv " + qr.filename + str(" /home/AdityaSingh17/flask_onweb/static/QRcode/"+form_fname+".png "))           #relative moving, easy when we deploy. note /front_end will cause error
 
-        #we moved the temp qr file to static folder, we used relative addressing, the cwd currently is /home/devillord17/Desktop/QR_Project
-
         #qrfilename = "~/Desktop/QR_Project/Front_end/static/"+form_fname+".png"
-        #f = open("helloworld.html","wt")                                                                            #idhar edit kr be
-        #f.write("<html><body><img src=\"{{ url_for('static', filename = '"+(form_fname+".png")+"') }}\" height=\"300\" width=\"200\"></body></html>")
-        #f.write("<html><body><img src=\"../static/"+(form_fname+".png")+"\" height=\"300\" width=\"200\"></body></html>")
-        #works if i dont move and directly just render the file.
         #os.system("mv ~/Desktop/QR_Project/helloworld.html ~/Desktop/QR_Project/Front_end/templates/helloworld.html")  #deosnt work when i move
 
-        """
-        this is v imp man, jan laga diya tha ye krne me. gand hi fat gaya ekdum.
-        """
 
         full_filename = os.path.join(app.config['UPLOAD_FOLDER'], (form_fname+".png"))    #under folder QRcode, there is a .png file.
 
