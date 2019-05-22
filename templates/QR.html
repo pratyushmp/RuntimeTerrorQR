@@ -5,6 +5,11 @@
 <html>
 <head>
     <title>QR CODE</title>
+    <script>
+            function goBack() {
+              window.history.back()
+            }
+            </script>
 </head>
 <body>
     <!-- <img src="{{ user_image }}" alt="QRCODE!">  -->
@@ -21,9 +26,9 @@
     -->
     QR IMAGE GENERATED!
    <!-- <button onclick="window.location='\\form\\{{ fname }}';">See QRIMAGE!!</button>  -->
-    <button onclick="window.location='\\form\\QR\\{{ fname }}';">Download the image!</button> <!-- fname comes from flask as filename for url creation!-->
-    <button onclick="window.location='\\form';">GO back to form page</button> 
-    <button onclick="window.location='\\form\\QRIMG\\{{ fname }}';">see image</button>
+    <button onclick="window.location='\\QR\\{{ fname }}';">Download the image!</button> <!-- fname comes from flask as filename for url creation!-->
+    <button onclick="goBack()">Go Back</button>
+   <!----> <button onclick="window.location='\\QRIMG\\{{ fname }}';">see image</button>
     
 </body>
 </html>

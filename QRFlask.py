@@ -70,12 +70,12 @@ def upload():
    #this thing creates a damn html page and renders it. tf. return """  <html> hello world lol i am new to this thing</html>   """
 
 
-@app.route("/form/QR/<p>")                                           #used to redirect direct download! sending the file as download from the same file it is viewd, QR!
+@app.route("/QR/<p>")                                           #used to redirect direct download! sending the file as download from the same file it is viewd, QR!
 def QRdown(p):                      #the <p> is used to send a arguemnt, which is the filename of the file to be downloaded, this is used along with the folder
                                     #to enable download, the url will be /form/ORIMAGE/filename(p)
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename=p, as_attachment=True)
 
-@app.route("/form/QRIMG/<p>")
+@app.route("/QRIMG/<p>")
 def QRIMG(p):
     #full_filename = os.path.join(app.config['UPLOAD_FOLDER'], p)
     #return render_template("QRIMG.html" , user_image=full_filename )
@@ -87,7 +87,6 @@ def QRIMG(p):
 
     return render_template("QRIMG.html",user_image=str("/"+full_filename),fname=p)   #this motherfucker is working!!!!!
     #just had to add that extra "/" before the static file to make it working lol. whatastupid i am lol. wasted 2 hrs lol.
-
 
 @app.route("/suggestion",methods = ["POST","GET"])
 def suggestion():

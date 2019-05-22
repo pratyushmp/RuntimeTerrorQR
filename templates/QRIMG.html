@@ -4,12 +4,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+        <script>
+                function goBack() {
+                  window.history.back()
+                }
+                </script>
     <title>QR IMAGE</title>
 </head>
 <body>
      <img src="{{ user_image }}" alt="QRCODE!"> 
      <button onclick="window.location='\\';">GO to home!</button>
-     <button onclick="window.location='\\form\\QR\\{{ fname }}';">Download the image!</button>
-     <button onclick="window.location='\\form';">GO back to form page</button> 
+     <button onclick="window.location='\\QR\\{{ fname }}';">Download the image!</button>
+     <button onclick="goBack()">Go Back</button> 
 </body>
 </html>
