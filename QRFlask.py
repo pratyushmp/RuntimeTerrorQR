@@ -93,8 +93,10 @@ def QRIMG(p):
 def suggestion():
     if request.method == "POST":                                #send data to flask
         form_fb = request.form["feedback"]
+        form_fname = request.form["name"]
         f = open("feedback.txt","a")
-        f.write("\nFEEDBACK AT "+str(time.ctime())+"\n")       #time.ctime() gives op as  Sun Sep 10 01:19:25 2017
+        f.write("\n \nFFEEDBACK AT "+str(time.ctime()))       #time.ctime() gives op as  Sun Sep 10 01:19:25 2017
+        f.write("\nFEEDBACK FROM : "+form_fname+"\n")
         f.write(form_fb)
         f.write("\nDONE")
         f.close
@@ -103,6 +105,7 @@ def suggestion():
         return render_template("suggestion.html")
     
     return "THANKYOU FOR YOUR FEEDBACK"
+
 
 if __name__ == '__main__':
     app.run(debug = True)
