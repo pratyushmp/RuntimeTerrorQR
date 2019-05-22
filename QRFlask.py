@@ -88,6 +88,11 @@ def QRIMG(p):
     return render_template("QRIMG.html",user_image=str("/"+full_filename),fname=p)   #this motherfucker is working!!!!!
     #just had to add that extra "/" before the static file to make it working lol. whatastupid i am lol. wasted 2 hrs lol.
 
+
+@app.route("/suggestion")
+def suggestion():
+    return render_template("suggestion.html")
+
 if __name__ == '__main__':
     app.run(debug = True)
 
