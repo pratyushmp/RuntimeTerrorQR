@@ -9,20 +9,18 @@
 <form NAME = "REGFORM" METHOD = "POST" action = /form >
 <div class="contact-form">
         <h2 class = "section-name"> Fill the below form </h2>
+
         <p> Name<span style="color:#FF0000;"> *</span> </p>
-        <input type = "text" name = "name" autocomplete="off">
+        <input type = "text" placeholder="Enter Name" name = "name" autocomplete="off" required>
 
-        <p> Phone Number<span style="color:#FF0000;"> *</span> </p>
-        <input type = "text" name = "phone" autocomplete="off">
+        <p> Phone Number <span style="color:#FF0000;"> *</span> </p>
+        <input type = "text" placeholder="Enter the 10 digit phone number " maxlength = 10 name = "phone" autocomplete="off" required>
 
-        <p> Email Id<span style="color:#FF0000; "> * <span> </p>
-        <input type = "text" name = "email" autocomplete="off">
+        <p> Email Id </p>
+        <input type = "text" placeholder="Enter Email (optional) " name = "email" autocomplete="off">
 
-        <p> Enter the info about the event </p>
-        <textarea> </textarea>
-
-        <p> Enter the filename by which you want to store it (leave blank if you dont wanna mess with it) </p>
-        <input type = "text" name = "fname" autocomplete="off">
+        <p> Enter the filename by which you want to store it in the server (optional) </p>
+        <input type = "text" placeholder="Enter filename (optional) " name = "fname" autocomplete="off">
 
         <p><span style="color:#FF0000;">*</span> - Required to be filled </p>
 
