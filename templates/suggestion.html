@@ -8,8 +8,10 @@
 <form NAME = "REGFORM" METHOD = "POST" action = /suggestion >
 <div class="contact-form">
         <h2 class = "section-name"> Liked/Disliked something? let us know </h2>
+        <p>Your name please? </p>
+        <input type = "text" placeholder="Your name here" name = "name" autocomplete="off">
         <p> Tell us what you feel about out project </p>
-        <input type = "text" placeholder="Write here " name = "feedback" autocomplete="off" width="200px">
+        <textarea type = "text" placeholder="Write here " name = "feedback" autocomplete="off" rows=35 cols=150 autofocus=autofocus onfocus="this.value=''" required>  </textarea>
 
         <button type = "submit" VALUE = "Submit" > Submit </button>
 </div>
