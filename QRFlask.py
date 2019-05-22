@@ -89,9 +89,20 @@ def QRIMG(p):
     #just had to add that extra "/" before the static file to make it working lol. whatastupid i am lol. wasted 2 hrs lol.
 
 
-@app.route("/suggestion")
+@app.route("/suggestion",methods = ["POST","GET"])
 def suggestion():
-    return render_template("suggestion.html")
+    if request.method == "POST":                                #send data to flask
+        form_fb = request.form["feedback"]
+        f = open("feedback.txt","a")
+        f.write("\nFEEDBACK AT "+str(time.ctime())+"\n")       #time.ctime() gives op as  Sun Sep 10 01:19:25 2017
+        f.write(form_fb)
+        f.write("\nDONE")
+        f.close
+
+    elif request.method == "GET":                               #send the template onto html.
+        return render_template("suggestion.html")
+    
+    return "THANKYOU FOR YOUR FEEDBACK"
 
 if __name__ == '__main__':
     app.run(debug = True)
