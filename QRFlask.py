@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request , url_for , send_from_directory , send_file
+from flask import Flask, render_template, request , url_for , send_from_directory , send_file,redirect
 from qrtools.qrtools import QR
 import os
 import warnings
@@ -93,18 +93,18 @@ def suggestion():
     if request.method == "POST":                                #send data to flask
         form_fb = request.form["feedback"]
         form_fname = request.form["name"]
+        form_score = request.form["rating"]
         f = open("feedback.txt","a")
         f.write("\n \nFFEEDBACK AT "+str(time.ctime()))       #time.ctime() gives op as  Sun Sep 10 01:19:25 2017
-        f.write("\nFEEDBACK FROM : "+form_fname+"\n")
+        f.write("\nFEEDBACK FROM : "+form_fname)
+        f.write("\nFEEDBACK SCORE : "+form_score+"\n")
         f.write(form_fb)
         f.write("\nDONE")
         f.close
+        return redirect("/")
 
     elif request.method == "GET":                               #send the template onto html.
         return render_template("suggestion.html")
-    
-    return "THANKYOU FOR YOUR FEEDBACK"
-
 
 if __name__ == '__main__':
     app.run(debug = True)
