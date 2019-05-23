@@ -67,12 +67,10 @@ def upload():
 @app.route("/form", methods = ["POST","GET"])
 def form():
     if request.method == "POST":                #If the user wants to post on this page.
-       
         form_name = request.form["name"]
         form_phone = request.form["phone"]
         form_email = request.form["email"]
         form_fname = request.form["fname"]
-        """ """
         warnings.filterwarnings("ignore")
         final_data = [('N',form_name),('TEL',str("+91"+form_phone)),('EMAIL',form_email)]
         qr = QR(data=final_data,data_type='phonebook',level='h',margin_size=10,pixel_size=10)
@@ -92,6 +90,8 @@ def form():
 
         #return render_template("QR.html", user_image = full_filename)   #user_image is a variable in html file, so we just give the path to it.
         #return send_from_directory(app.config['UPLOAD_FOLDER'], filename=form_fname+".png", as_attachment=True) #use this function to directly enable the user to download the qr code!
+
+        app.config['THEFILE'] = form_fname+".png"           #made a config to be used futher as filename
 
         return render_template("QR.html", user_image = full_filename , fname=app.config['THEFILE'])   #fname was given for uniquely identifying the url!
         
