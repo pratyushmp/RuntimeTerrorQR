@@ -6,10 +6,15 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'CSS/suggestion.css') }}">
 </head>
 <body>
+        <script>
+                function myFunction() {
+                  window.alert("Thankyou for you feedback!!");
+                }
+        </script>
 <form NAME = "REGFORM" METHOD = "POST" action = /suggestion >
 <div class="contact-form">
         <h2 class = "section-name"> Liked/Disliked something? Please let us know here- </h2>
-        <p> User name- </p>
+        <p> Name- </p>
         <input type = "text" placeholder="Your name here" name = "name" autocomplete="off">
 
         <h2> Rate us - </h2>
@@ -25,7 +30,7 @@
         <textarea type = "text" placeholder="Write here " name = "feedback" autocomplete="off" rows=20 cols=60 autofocus=autofocus onfocus="this.value=''" required>  </textarea>
 </div>
 <br>
-<button type = "submit" VALUE = "Submit" > Submit </button>
+<button onclick="myFunction()" type = "submit" VALUE = "Submit" > Submit </button>
 </form>
 </body>
 </html>
