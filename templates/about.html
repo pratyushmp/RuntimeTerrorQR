@@ -1,32 +1,98 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title> About Us </title>
-    <link rel="icon" href="{{ url_for('static',filename = 'tabicon.png') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'CSS/about.css') }}" height="200" width="200">
-</head>
+    <head>
+            <meta charset="utf-8">
+            <title> About </title>
+            <link rel="icon" href="{{ url_for('static',filename = 'tabicon.png') }}">
+    </head>
 
-<div class="contents">
-        <h3 class="section-title">The Team </h3>
-        <div class="contents-item">
-          <img src="{{ url_for('static', filename = 'kshitij.jpeg') }}" height="300" width="200">
-          <p>Kshitij Dhar</p>
-          <p>Frontend Designer</p>
-        </div>
-        <div class="contents-item">
-          <img src="{{ url_for('static', filename = 'pratyush.jpg') }}" height="300" width="200">
-          <p>M. Pratyush</p>
-          <p>Frontend Handler</p>
-        </div>
-        <div class="contents-item">
-          <img src="{{ url_for('static', filename = 'aditya.jpeg') }}" height="300" width="200">
-          <p>Aditya Singh</p>
-          <p>Backend Developer</p>
-        </div>
-        <div class="contents-item">
-          <img src="{{ url_for('static', filename = 'abhishek.jpeg') }}" height="300" width="200">
-          <p>Abhishek Bhalotia</p>
-          <p>Backend Handler</p>
-        </div>
-</div>
+    <body>
+        <h2 style = 'text-align: center'><u>The QR CODE GENERATOR</u></h2>
+
+        <h2><u>What is QR Code?</u></h2>
+        <p> 
+            A QR Code is a two-dimensional barcode that is readable by smartphones. It allows to encode over 4000
+            characters in a two dimensional barcode. QR Codes may be used to display text to the user, to open a
+            URL, save a contact to the address book or to compose text messages. "QR Code" is a registered
+            trademark of DENSO WAVE INCORPORATED.
+        </p>
+
+        <p>
+            To read QR Codes with your smartphone, you need an appropriate software installed on your phone. For
+            Android-based devices, you can use Barcode Scanner by ZXing. On iOS-Devices like iPhones there are
+            also QR Code readers available on the AppStore, for Example i-nigma. On Firefox OS try QR Code
+            Scanner. On Symbian devices, you can use Mobiletag barcodes reader for example.
+        </p>
+
+        <h2>
+            <u>APPLICATIONS</u>
+        </h2>
+
+        <h3>
+            Conference/Events Signage:-
+        </h3>
+
+        <ul style = "list-style-type: disc">
+            <li>
+                Although not in trend yet, using QR codes in conferences will soon catch up and become a norm.
+                It can be a great tool for event organizers to save costs on printing agenda of conferences,events
+                in colleges , on paper, as QR codes can be used to provide attendees with a full description of
+                the itinerary and bios of speakers.
+            </li>
+
+            <li>
+                As part of a personalized direct mail piece. Each QR code can go to a PURL (personalized
+                URL (Uniform Resource Locator)).
+            </li>
+
+            <li>
+                In WhatsApp you may be invited or invite users to a group via a link or QR code.The process is
+                simple: if you are the administrator of a group you can invite WhatsApp users creating a
+                QR-Code that you can share on social networks .
+            </li>
+
+            <li>
+                In many scenarios that seek to create a link between the real/physical world and the
+                virtual/digital QR codes are excellent allies.
+            </li>
+        </ul>
+
+        <h3>
+            Lost And Found:-
+        </h3>
+
+        <ul style = "list-style-type: disc">
+            <li>
+                Use QR codes printed in key chains that allows anyone with a smartphone (and hopefully a QR
+                code app) to read the message and contact you. As an offshoot, you can generate your own QR
+                code with contact details like phone number, have them printed out in stickers, and use them on
+                items which you tend to misplace like phones and...pets.
+            </li>
+
+            <li>
+                Mobile class newsletters Keep students updated on what’s happening in class with a QR
+                linked mobile class newsletter.
+            </li>
+
+            <li>
+                Give answers to test question Conceal the answers to test questions in a QR Code and add it
+                at the end of the paper. As test finishes, students can scan the QR Code and self-check their
+                answers .
+            </li>
+        </ul>
+
+        <h2>
+            <u>CRACKING THE CODE</u>
+        </h2>
+
+        <ul style = "list-style-type: square">
+            <li>Python 3.7</li>
+            <li>Java Script</li>
+            <li>CSS(Cascading Style Sheet)</li>
+            <li>HTML(Hyper Text Markup Language)</li>
+            <li>Flask(Web Development)</li>
+        </ul>    
+    
+    </body>
+
+</html>
